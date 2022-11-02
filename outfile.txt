@@ -1,11 +1,21 @@
-1
+<Pr, int >1
+<Pr, main >1
+en la linea 1 hay un error 
+en la linea 1 hay un error 
+en la linea 2 hay un error 
+<Pr, printf >3
+en la linea 3 hay un error 
+en la linea 3 hay un error 
+<id, Hola >3
+<id, mundo >3
+en la linea 3 hay un error 
+en la linea 3 hay un error 
+en la linea 3 hay un error 
+<Pr, int >4
 <id, a >4
-<Pr, if >6
-en la linea 6 hay un error 
-en la linea 6 hay un error 
-en la linea 8 hay un error 
-en la linea 8 hay un error 
-numero de lineas es : 8
-Numero de caracteres: 31
-a 1
-if 1
+en la linea 4 hay un error 
+<id, b >4
+en la linea 4 hay un error 
+<id, c >4
+en la linea 4 hay un error 
+<id, c >5

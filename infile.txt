@@ -1,8 +1,7 @@
-34.124
-
-3e-2
-a = b
-main
-if()else
-
-$$
+int main()
+{
+  printf("Hola mundo");
+  int a,b,c;
+  c + d = b;
+ 
+ }
