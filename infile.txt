@@ -1,8 +1,30 @@
-34.124
+#include<stdio.h>
 
-3e-2
-a = b
-main
-if()else
+int primo(int num2);
 
-$$
+int primo(int num2){
+	 int i, j=0;
+	 /*comentario1*/
+	 for (i=1; i<=num2;i++){
+	 	 if(num2i=0){
+	 	 	j++;
+		  }
+   }
+	  if(j=2)
+	 	printf("\n %i ",num2);
+
+}
+
+int main(){
+
+//comentario2
+	int  i ;
+	     e=-45;
+		 nn1: 45.66;
+		 nn2ex = 34e-2;
+	     printf("los numeros primos en un rango del 1 al 10000");
+      	 for (i=1; i<=10000; i+)
+      	 primo(i);
+      	 
+	return 0;
+}

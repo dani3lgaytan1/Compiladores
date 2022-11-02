@@ -1,11 +1,183 @@
-1
-<id, a >4
-<Pr, if >6
+< #, - >
+<id, include >1
+< relop, < >
+<id, stdio >1
+< ., - >
+<id, h >1
+<Pr, int >3
+<id, primo >3
+< (, - >
+<Pr, int >3
+<id, num2 >3
+< ), - >
+< ;, - >
+<Pr, int >5
+<id, primo >5
+< (, - >
+<Pr, int >5
+<id, num2 >5
+< ), - >
+< {, - >
 en la linea 6 hay un error 
-en la linea 6 hay un error 
+<Pr, int >6
+<id, i >6
+< ,, - >
+<id, j >6
+< relop, = >
+numero: 0  linea:6
+< ;, - >
+en la linea 7 hay un error 
 en la linea 8 hay un error 
-en la linea 8 hay un error 
-numero de lineas es : 8
-Numero de caracteres: 31
-a 1
-if 1
+<Pr, for >8
+< (, - >
+<id, i >8
+< relop, = >
+numero: 1  linea:8
+< ;, - >
+<id, i >8
+< relop, <= >
+<id, num2 >8
+< ;, - >
+<id, i >8
+< operador aritmetico: ++ >
+< ), - >
+< {, - >
+en la linea 9 hay un error 
+en la linea 9 hay un error 
+<Pr, if >9
+< (, - >
+<id, num2i >9
+< relop, = >
+numero: 0  linea:9
+< ), - >
+< {, - >
+en la linea 10 hay un error 
+en la linea 10 hay un error 
+en la linea 10 hay un error 
+<id, j >10
+< operador aritmetico: ++ >
+< ;, - >
+en la linea 11 hay un error 
+en la linea 11 hay un error 
+< }, - >
+< }, - >
+en la linea 13 hay un error 
+<Pr, if >13
+< (, - >
+<id, j >13
+< relop, = >
+numero: 2  linea:13
+< ), - >
+en la linea 14 hay un error 
+en la linea 14 hay un error 
+<Pr, printf >14
+< (, - >
+< ", - >
+en la linea 14 hay un error 
+<id, n >14
+<OPERADOR aritmetico:  %, - > 14
+<id, i >14
+< ", - >
+< ,, - >
+<id, num2 >14
+< ), - >
+< ;, - >
+< }, - >
+<Pr, int >18
+<Pr, main >18
+< (, - >
+< ), - >
+< {, - >
+< //, - > 20
+en la linea 21 hay un error 
+<Pr, int >21
+<id, i >21
+< ;, - >
+en la linea 22 hay un error 
+<id, e >22
+< relop, = >
+numero: -45  linea:22
+< ;, - >
+en la linea 23 hay un error 
+en la linea 23 hay un error 
+<id, nn1 >23
+< :, - >
+numero: 45.66  23
+< ;, - >
+en la linea 24 hay un error 
+en la linea 24 hay un error 
+<id, nn2ex >24
+< relop, = >
+numero: 34e-2 24
+< ;, - >
+en la linea 25 hay un error 
+<Pr, printf >25
+< (, - >
+< ", - >
+<id, los >25
+<id, numeros >25
+<id, primos >25
+<id, en >25
+<id, un >25
+<id, rango >25
+<id, del >25
+numero: 1  linea:25
+<id, al >25
+numero: 10000  linea:25
+< ", - >
+< ), - >
+< ;, - >
+en la linea 26 hay un error 
+<Pr, for >26
+< (, - >
+<id, i >26
+< relop, = >
+numero: 1  linea:26
+< ;, - >
+<id, i >26
+< relop, <= >
+numero: 10000  linea:26
+< ;, - >
+<id, i >26
+< relop, + >
+< ), - >
+en la linea 27 hay un error 
+<id, primo >27
+< (, - >
+<id, i >27
+< ), - >
+< ;, - >
+en la linea 28 hay un error 
+en la linea 29 hay un error 
+<Pr, return >29
+numero: 0  linea:29
+< ;, - >
+< }, - >
+numero de lineas es : 30
+Numero de caracteres: 460
+al 1
+del 1
+e 1
+en 1
+for 2
+h 1
+i 10
+if 2
+include 1
+int 7
+j 3
+los 1
+main 1
+n 1
+nn1 1
+nn2ex 1
+num2 4
+num2i 1
+numeros 1
+primo 3
+primos 1
+printf 2
+rango 1
+return 1
+stdio 1
+un 1
