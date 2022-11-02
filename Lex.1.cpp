@@ -30,7 +30,7 @@ const string KEY_SET[]={ // Colecci�n de palabras clave
         "vector",
 };
 map<string,int> word_num; //Numero de palabras
-const char* FILE_NAME="./infile.txt";
+const char* FILE_NAME="./nuevo.txt";
 char strBuffer[1024]; // Bufer de cadenas
 string token;
 //const string operadores_relacionales[] = {">", "<", ">=", "<=", "=", "<>"};
@@ -100,7 +100,7 @@ void procesar_entrada(char* buf) // El contenido de una l�nea de cadena
 					state = 1; // Ingrese el estado 1
                     token = C;
                     C = getChar(buf);
-                }
+                }    
                 else if( esunDigito(C) )
                 { //estado de numero 
                     state = 2; //Se va a el estado 2
@@ -132,7 +132,7 @@ void procesar_entrada(char* buf) // El contenido de una l�nea de cadena
 				}
 				else if (C=='-'){
                 	state =13;
-                	token = C;
+                	token += C;
                     C = getChar(buf);
 				}
                 else if( C=='<' )
@@ -162,8 +162,11 @@ void procesar_entrada(char* buf) // El contenido de una l�nea de cadena
 
                     C = getChar(buf);
                 }
-                else{
-                    error();
+                else if(C=='\t' || C=='\n'){
+                  state = 0;
+                    C = getChar(buf);
+                }else{
+                      error();
                     // Omitir este caracter 
                     C = getChar(buf);
                 }
@@ -341,6 +344,8 @@ void procesar_entrada(char* buf) // El contenido de una l�nea de cadena
 				}else{
                     cout<<"< relop, + >"<<endl; 
             		state = 0;
+
+                    
                 }
             break;	
             case 13://numero con signo -3
@@ -377,7 +382,7 @@ void procesar_entrada(char* buf) // El contenido de una l�nea de cadena
 				}else{
                     cout<<"< relop, > >"<<endl; 
             		state = 0;
-                   
+                   C=getChar(buf);
                 }
             break;
             case 16://caso ==
@@ -389,13 +394,40 @@ void procesar_entrada(char* buf) // El contenido de una l�nea de cadena
 				}else{
                      cout<<"< relop, = >"<<endl; 
             		state = 0;
+                    C = getChar(buf);
                 }
-            break;	
-           default: error();
+                
+                    break;
+           /* case 17:
+                  if( esunaLetra(C) )
+                {
+                    state=17//estado 1 del id 
+                    token += C;
+                    C = getChar(buf);
+                }
+                else{ // Al separador
+                    word_num[token]++; // Cuenta el n�mero total de cada caract
+                    if( palabraReservada(token) )
+                    {
+                        cout<<"<Pr, "<<token<<" >";
+                        printf("%d\n",line_num );
+
+                    }
+                    else
+                    {//si no es una palabra reservada entonces es un identificador 
+                        cout<<"<Cadena: , "<<token<<" >";
+                        printf("%d\n",line_num );
+
+                    }
+
+                    state = 0;
+                }
+            break;*/	
+           /*default: error();
 
                     state=0;
                     C = getChar(buf);
-                break;
+            break;*/
         }
     }
 }

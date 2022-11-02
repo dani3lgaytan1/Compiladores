@@ -1,30 +1,8 @@
-#include<stdio.h>
+33333
+333
 
-int primo(int num2);
+a
 
-int primo(int num2){
-	 int i, j=0;
-	 /*comentario1*/
-	 for (i=1; i<=num2;i++){
-	 	 if(num2i=0){
-	 	 	j++;
-		  }
-   }
-	  if(j=2)
-	 	printf("\n %i ",num2);
+int main
 
-}
-
-int main(){
-
-//comentario2
-	int  i ;
-	     e=-45;
-		 nn1: 45.66;
-		 nn2ex = 34e-2;
-	     printf("los numeros primos en un rango del 1 al 10000");
-      	 for (i=1; i<=10000; i+)
-      	 primo(i);
-      	 
-	return 0;
-}
+return 
