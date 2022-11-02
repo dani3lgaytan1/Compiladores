@@ -1,0 +1,11 @@
+1
+<id, a >4
+<Pr, if >6
+en la linea 6 hay un error 
+en la linea 6 hay un error 
+en la linea 8 hay un error 
+en la linea 8 hay un error 
+numero de lineas es : 8
+Numero de caracteres: 31
+a 1
+if 1

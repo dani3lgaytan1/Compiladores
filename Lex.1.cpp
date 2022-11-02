@@ -30,7 +30,7 @@ const string KEY_SET[]={ // Colección de palabras clave
 };
 map<string,int> word_num; //Número de palabras
 const char* FILE_NAME="./infile.txt";
-char strBuffer[5000]; // Búfer de cadenas
+char strBuffer[1024]; // Búfer de cadenas
 string token;
 const string operadores_relacionales[] = {">", "<", ">=", "<=", "=", "<>"};
 const string operadores_aritmeticos[] = {"*", "/", "%", "^"};
@@ -75,7 +75,7 @@ void error()
 void process_string(char* buf) // El contenido de una línea de cadena
 {
     if(state != 4) // el estado 4 es de comentario , lo que significa que es un bloque de comentarios
-        state = 0;
+      state = 0;
     char C=' ';//inicianizando en c 
     //printf("%d\n",line_num );
     int pos=0;
@@ -160,13 +160,13 @@ void process_string(char* buf) // El contenido de una línea de cadena
                     word_num[token]++; // Cuenta el número total de cada caract
                     if( palabraReservada(token) )
                     {
-                        cout<<"< key, "<<token<<" >";
+                        cout<<"<Pr, "<<token<<" >";
                         printf("%d\n",line_num );
 
                     }
                     else
                     {
-                        cout<<"< id, "<<token<<" >";
+                        cout<<"<id, "<<token<<" >";
                         printf("%d\n",line_num );
 
                     }
@@ -191,8 +191,8 @@ void process_string(char* buf) // El contenido de una línea de cadena
 				}
                 else
                 {
-                    int num=stoi(token); // La cadena se convierte a int para poder imprimirle 
-                    cout<<"< num, "<<num<<" >";
+                    //int num=stoi(token); // La cadena se convierte a int para poder imprimirle 
+                    //cout<<"< token, "<<num<<" >";
                     printf("%d\n",line_num );
 
                     state = 0;
@@ -233,13 +233,13 @@ void process_string(char* buf) // El contenido de una línea de cadena
                 {
                     state = 0;
                     C = getChar(buf);
-                    return;
+                
                 }
                 break;
             case 7:
                  if(esunDigito(C)){
-                 	 int num=stoi(token); // La cadena se convierte a int
-                    cout<<"< num, "<<num<<" >";
+                 	 //int num=stoi(token); // La cadena se convierte a int
+                    //cout<<"< num, "<<num<<" >";
                     printf("%d\n",line_num );
                  	state=10;
                  	token+= C;
@@ -292,8 +292,8 @@ void process_string(char* buf) // El contenido de una línea de cadena
                     
                 }else
                 {
-                    int num=stoi(token); // La cadena se convierte a int
-                    cout<<"< num, "<<num<<" >";
+                    //int num=stoi(token); // La cadena se convierte a int
+                    //cout<<"< num, "<<num<<" >";
                     printf("%d\n",line_num );
                     state = 0;
                 }
@@ -356,14 +356,12 @@ void process_string(char* buf) // El contenido de una línea de cadena
             	state = 0;
                     C=getChar(buf);
 				}
-        
-                else{
-                    error();
+           break;
+           default: error();
 
                     state=0;
                     C = getChar(buf);
-                }
-              default: cout<<"caracter no identificado"<<endl;
+                break;
         }
     }
 }
@@ -377,14 +375,14 @@ int main()
 
     if( file==NULL )
     {
-        printf("Error! opening file");
+        printf("Error! opening xfile");
         exit(1);
     }
     // Realice la lectura línea por línea del archivo
     while( !feof(file) )
     {
         line_num++;
-        fgets(strBuffer,5000,file);
+        fgets(strBuffer,1024,file);
         process_string(strBuffer); // Cadena de proceso
     }
     fclose(file);
