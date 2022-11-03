@@ -1,145 +1,162 @@
 < #, - >
 <id, include >1
 < relop, < >
-<id, stdio >1
-< ., - >
-<id, h >1
-<Pr, int >3
-<id, primo >3
+<id, PPPPPP >1
+<Pr, int >4
+<id, primo >4
 < (, - >
-<Pr, int >3
-<id, num2 >3
+<Pr, int >4
+<id, num2 >4
 < ), - >
 < ;, - >
-<Pr, int >5
-<id, primo >5
-< (, - >
-<Pr, int >5
-<id, num2 >5
-< ), - >
-< {, - >
 <Pr, int >6
-<id, i >6
-< ,, - >
-<id, j >6
-< relop, = >
-< ;, - >
-<Pr, for >8
+<id, primo >6
 < (, - >
-<id, i >8
-< relop, = >
-< ;, - >
-<id, i >8
-< relop, <= >
-<id, num2 >8
-< ;, - >
-<id, i >8
-< operador aritmetico: ++ >
+<Pr, int >6
+<id, num2 >6
 < ), - >
 < {, - >
-<Pr, if >9
+<Pr, int >7
+<id, i >7
+< ,, - >
+<id, j >7
+< relop, = >
+numero: 0  linea:7
+< ;, - >
+<Pr, for >9
 < (, - >
-<id, num2 >9
-<OPERADOR aritmetico:  %, - > 9
 <id, i >9
-< relop, == >
+< relop, = >
+numero: 1  linea:9
+< ;, - >
+<id, i >9
+< relop, <= >
  9
-numero: 0  linea:9
+<id, num2 >9
+< ;, - >
+<id, i >9
+< +, - >
+< +, - >
 < ), - >
 < {, - >
-<id, j >10
-< operador aritmetico: ++ >
+<Pr, if >10
+< (, - >
+<id, num2 >10
+<OPERADOR aritmetico:  %, - > 10
+<id, i >10
+< relop, == >
+ 10
+numero: 0  linea:10
+< ), - >
+< {, - >
+<id, j >11
+< +, - >
+< +, - >
+< ;, - >
+<id, l >12
+< -, - >
+< -, - >
+<id, a >13
+< -, - >
+<id, b >13
+< ;, - >
+<id, tt >14
+< +, - >
+numero: 777777777  linea:15
+< +, - >
+numero: 888888888888  linea:15
+< ;, - >
+numero: 676767  linea:16
+< +, - >
+numero: 1  linea:16
+< -, - >
+numero: 5  linea:17
 < ;, - >
 < }, - >
 < }, - >
-<Pr, if >13
+<Pr, if >22
 < (, - >
-<id, j >13
+<id, j >22
 < relop, == >
- 13
-numero: 2  linea:13
+ 22
+numero: 2  linea:22
 < ), - >
-<Pr, printf >14
+<Pr, printf >23
 < (, - >
 < ", - >
-en la linea 14 hay un error 
-<id, n >14
-<OPERADOR aritmetico:  %, - > 14
-<id, i >14
+en la linea 23 hay un error 
+<id, n >23
+<OPERADOR aritmetico:  %, - > 23
+<id, i >23
 < ", - >
 < ,, - >
-<id, num2 >14
+<id, num2 >23
 < ), - >
 < ;, - >
 < }, - >
-<Pr, int >18
-<Pr, main >18
+<Pr, int >27
+<Pr, main >27
 < (, - >
 < ), - >
 < {, - >
-<Pr, int >19
-<id, i >19
+<Pr, int >28
+<id, i >28
 < ;, - >
-<Pr, printf >20
+<Pr, printf >29
 < (, - >
 < ", - >
-<id, los >20
-<id, numeros >20
-<id, primos >20
-<id, en >20
-<id, un >20
-<id, rango >20
-<id, del >20
-numero: 1  linea:20
-<id, al >20
-numero: 10000  linea:20
+<id, los >29
+<id, numeros >29
+<id, primos >29
+<id, en >29
+<id, un >29
+<id, rango >29
+<id, del >29
+numero: 1  linea:29
+<id, al >29
+numero: 10000  linea:29
 < ", - >
 < ), - >
 < ;, - >
-<Pr, for >21
+<Pr, for >30
 < (, - >
-<id, i >21
+<id, i >30
 < relop, = >
+numero: 1  linea:30
 < ;, - >
-<id, i >21
+<id, i >30
 < relop, <= >
-numero: 10000  linea:21
+ 30
+numero: 10000  linea:30
 < ;, - >
-<id, i >21
-< operador aritmetico: ++ >
+<id, i >30
+< +, - >
+< +, - >
 < ), - >
-<id, primo >22
+<id, primo >31
 < (, - >
-<id, i >22
+<id, i >31
 < ), - >
 < ;, - >
-<Pr, if >24
-< (, - >
-numero: 5.5  24
-< relop, < >
-numero: 6  linea:24
-< ), - >
-< {, - >
-<id, a >25
-< relop, = >
-< }, - >
-<Pr, return >27
-numero: 0  linea:27
+<Pr, return >33
+numero: 0  linea:33
 < ;, - >
 < }, - >
-numero de lineas es : 28
-Numero de caracteres: 413
+numero de lineas es : 34
+Numero de caracteres: 475
+PPPPPP 1
 a 1
 al 1
+b 1
 del 1
 en 1
 for 2
-h 1
 i 11
-if 3
+if 2
 include 1
 int 7
 j 3
+l 1
 los 1
 main 1
 n 1
@@ -150,5 +167,5 @@ primos 1
 printf 2
 rango 1
 return 1
-stdio 1
+tt 1
 un 1

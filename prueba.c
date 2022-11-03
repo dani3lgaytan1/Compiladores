@@ -8,6 +8,9 @@ int primo(int num2){
 	 for (i=1; i<=num2;i++){
 	 	 if(num2%i==0){
 	 	 	j++;
+			l--
+			a-b 
+			777777777 + 888888888888
 		  }
    }
 	  if(j==2)

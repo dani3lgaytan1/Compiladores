@@ -1,5 +1,6 @@
-#include<stdio.h>
+#include<PPPPPP>
 
+aYUDa
 int primo(int num2);
 
 int primo(int num2){
@@ -8,6 +9,14 @@ int primo(int num2){
 	 for (i=1; i<=num2;i++){
 	 	 if(num2%i==0){
 	 	 	j++;
+			l--
+			a-b; 
+			tt + pp
+			777777777 + 888888888888;
+			676767 + 1 
+			-5;
+			
+			4e5
 		  }
    }
 	  if(j==2)
@@ -21,8 +30,5 @@ int main(){
       	 for (i=1; i<=10000; i++)
       	 primo(i);
       	 
-    if(5.5 < 6 ){
-	  a = 34e-4
-	 }
 	return 0;
 }

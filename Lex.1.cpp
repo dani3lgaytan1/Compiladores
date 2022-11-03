@@ -61,7 +61,7 @@ bool operadorAritmetico(char c) // Determinar si es un signo de puntuaci�n
 
 bool isPunctuation(char c) // Determinar si es un signo de puntuaci�n+
 {
-    return  c=='(' || c==')' || c=='{'
+    return  c=='(' || c==')' || c=='{' || c=='+' || c=='-'
     || c=='}' || c=='[' || c==']'|| c==';' || c==':' || c=='#' || c=='"' || c==','|| c=='.';
 }
 //funcion que nos sirve para poder verificar si es palabra clave 
@@ -125,14 +125,14 @@ void procesar_entrada(char* buf) // El contenido de una l�nea de cadena
                     state = 0;
                     C = getChar(buf);
                 }
-                 else if (C=='+'){
+                /* else if (C=='+'){
                 	state =12;
                 	token = C;
                     C = getChar(buf);
-				}
+				}*/
 				else if (C=='-'){
                 	state =13;
-                	token += C;
+                	token = C;
                     C = getChar(buf);
 				}
                 else if( C=='<' )
@@ -280,7 +280,12 @@ void procesar_entrada(char* buf) // El contenido de una l�nea de cadena
 				 	state=9;
                  	token+= C;
 					C = getChar(buf); 
-				 }
+                 }else{
+                    cout<<"numero: "<<token<<"";
+                    printf("  linea:%d\n",line_num );
+
+                    state = 0;
+                 }
                 break;
             case 9://completar digito que contiene euler 
                    if(esunDigito(C)){
@@ -330,42 +335,33 @@ void procesar_entrada(char* buf) // El contenido de una l�nea de cadena
                     state = 0;
                 }
                 break;
-            case 12:
-            	if(esunDigito(C)){
-            			//numero con signo +
-            	state=2;
-            	token += C;
-                C = getChar(buf);
-				}else if(C=='+'){
-					//simbolo de operacion ++
-                     cout<<"< operador aritmetico: ++ >"<<endl;
-                    state = 0;
-                    C=getChar(buf);
-				}else{
-                    cout<<"< relop, + >"<<endl; 
+            /*case 12:
+        
+                    printf("< %c, - >\n",C); 
             		state = 0;
-
+                        C = getChar(buf);
                     
-                }
-            break;	
+                
+            */break;	
             case 13://numero con signo -3
  				if(esunDigito(C)){
             	state=2;
             	token += C;
                 C = getChar(buf);
-				} else if(C=='-'){
-                      cout<<"< operador aritmetico: -- >"<<endl; 
-						state=0;
-					   C=getChar(buf);
-				}else{
-                    cout<<"< relop, - >"<<endl; 
-            		state = 0;
+				} else{
+                    state = 0;
+                    printf("< - , - >\n");
+                    printf(" %d\n",line_num );
+                    C = getChar(buf);
+
                 }
+            
 				      //si no viene un digito entonces es solo -	state=0;  
             break;
             case 14:
                 if(C=='='){//caso <=
                      cout<<"< relop, <= >"<<endl; 
+                     printf(" %d\n",line_num );
 						state=0;
 					   C=getChar(buf);
                 }else{
@@ -376,13 +372,14 @@ void procesar_entrada(char* buf) // El contenido de una l�nea de cadena
                 break;
             case 15:
             	if(C=='='){//caso >=
-            		cout<<"< relop, >= >"<<endl; 
+            		cout<<"< relop, >= >"<<endl;
+                    printf(" %d\n",line_num ); 
             		state = 0;
                     C=getChar(buf);
 				}else{
                     cout<<"< relop, > >"<<endl; 
             		state = 0;
-                   C=getChar(buf);
+                    
                 }
             break;
             case 16://caso ==
@@ -394,7 +391,7 @@ void procesar_entrada(char* buf) // El contenido de una l�nea de cadena
 				}else{
                      cout<<"< relop, = >"<<endl; 
             		state = 0;
-                    C = getChar(buf);
+                    
                 }
                 
                     break;
